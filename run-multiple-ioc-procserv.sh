@@ -7,11 +7,9 @@ SCRIPTPATH="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" && pwd  )"
 set +u
 
 NUM_IOCS=$1
-SCAN=$2
-NELEMENTS=$3
+NELEMENTS=$2
 
 : ${NUM_IOCS:?"\"NUM_IOCS\" variable unset."}
-: ${SCAN:?"\"SCAN\" variable unset."}
 : ${NELEMENTS:?"\"NELEMENTS\" variable unset."}
 
 set -u
@@ -23,6 +21,6 @@ for i in `seq -f %03g 1 ${NUM_IOCS}`; do
     echo "==========================="
     echo "Starting IOC instance #${i}"
     echo "IOC Prefixes: P=${P}, R=${R} PORT=${PORT}"
-    /usr/local/bin/procServ -p /tmp/procServ-fast-archiver-${i}.pid -n FastArchiver${i} -i ^C^D ${PORT} ${SCRIPTPATH}/run-ioc.sh ${P} ${R} ${SCAN} ${NELEMENTS}
+    /usr/local/bin/procServ -p /tmp/procServ-fast-archiver-${i}.pid -n FastArchiver${i} -i ^C^D ${PORT} ${SCRIPTPATH}/run-ioc.sh ${P} ${R} ${NELEMENTS}
     echo "==========================="
 done

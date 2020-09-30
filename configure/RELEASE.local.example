@@ -1,0 +1,15 @@
+TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+
+SUPPORT=/opt/epics/synApps-lnls-R1-2-1/support
+
+# If using the sequencer, point SNCSEQ at its top directory:
+#SNCSEQ = $(MODULES)/seq-ver
+
+# EPICS_BASE usually appears last so other apps can override stuff:
+EPICS_BASE=/opt/epics/base
+
+# Set RULES here if you want to take build rules from somewhere
+# other than EPICS_BASE:
+#RULES=/path/to/epics/support/module/rules/x-y
+
+CALC=$(SUPPORT)/calc-R3-7-2

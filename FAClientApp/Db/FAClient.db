@@ -1,0 +1,12 @@
+record(acalcout,"$(P)$(R)FastDataWvf-Mon")
+{
+    field(DESC, "Fast waveform data calc.")
+    field(MDEL, "-1")
+    field(ADEL, "-1")
+    field(NELM, "$(NELEMENTS=10)")
+    field(NUSE, "$(NELEMENTS=10)")
+    field(SCAN, "$(SCAN=1 second)")
+    field(INPA, "0.1")
+    field(INAA, "$(P)$(R)FastDataWvf-Mon.AVAL")
+    field(CALC, "A+AA")
+}

@@ -16,5 +16,13 @@ NELEMENTS=$4
 
 set -u
 
+if [ -z "$SCAN" ]; then
+    SCAN="1 second"
+fi
+
+if [ -z "$NELEMENTS" ]; then
+    NELEMENTS="10"
+fi
+
 cd ${SCRIPTPATH}/iocBoot/iocFAClient
 P=${P} R=${R} SCAN=${SCAN} NELEMENTS=${NELEMENTS} ./st.cmd

@@ -1,20 +1,20 @@
-record(acalcout,"$(P)$(R)FastDataCalc-Mon")
+record(acalcout,"$(P)$(R)FastDataCalc$(WAVEFORM_ID)-Mon")
 {
-    field(DESC, "Fast waveform data calc")
+    field(DESC, "Fast waveform data calc #$(WAVEFORM_ID)")
     field(MDEL, "-1")
     field(ADEL, "-1")
     field(NELM, "$(NELEMENTS)")
     field(NUSE, "$(NELEMENTS)")
     field(SCAN, "1 second")
     field(INPA, "0.1")
-    field(INAA, "$(P)$(R)FastDataCalc-Mon.AVAL")
+    field(INAA, "$(P)$(R)FastDataCalc$(WAVEFORM_ID)-Mon.AVAL")
     field(CALC, "A+AA")
-    field(OUT,  "$(P)$(R)FastDataWvf-Mon PP")
+    field(OUT,  "$(P)$(R)FastDataWvf$(WAVEFORM_ID)-Mon PP")
 }
 
-record(waveform,"$(P)$(R)FastDataWvf-Mon")
+record(waveform,"$(P)$(R)FastDataWvf$(WAVEFORM_ID)-Mon")
 {
-    field(DESC, "Fast waveform data")
+    field(DESC, "Fast waveform data #$(WAVEFORM_ID)")
     field(MDEL, "-1")
     field(ADEL, "-1")
     field(FTVL, "DOUBLE")

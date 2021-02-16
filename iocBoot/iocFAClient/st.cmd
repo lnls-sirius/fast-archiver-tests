@@ -5,6 +5,7 @@
 epicsEnvSet("P", "$(P=Archiver-Client:)")
 epicsEnvSet("R", "$(R=Prod-001:)")
 epicsEnvSet("NELEMENTS", "$(NELEMENTS=100000)")
+epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "10000000")
 
 cd "${TOP}"
 
@@ -19,3 +20,4 @@ dbLoadRecords("${TOP}/db/FAClient.db", "P=${P}, R=${R}, NELEMENTS=${NELEMENTS}, 
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
+dbl

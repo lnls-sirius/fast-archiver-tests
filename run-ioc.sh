@@ -16,7 +16,7 @@ NELEMENTS=$3
 set -u
 
 if [ -z "$NELEMENTS" ]; then
-    NELEMENTS="10"
+    NELEMENTS="100000"
 fi
 
 cd ${SCRIPTPATH}/iocBoot/iocFAClient

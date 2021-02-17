@@ -17,6 +17,8 @@ FAClient_registerRecordDeviceDriver(pdbbase)
 dbLoadRecords("${TOP}/db/FAClient.db", "P=${P}, R=${R}, NELEMENTS=${NELEMENTS}, WAVEFORM_ID=01")
 dbLoadRecords("${TOP}/db/FAClient.db", "P=${P}, R=${R}, NELEMENTS=${NELEMENTS}, WAVEFORM_ID=02")
 dbLoadRecords("${TOP}/db/FAClient.db", "P=${P}, R=${R}, NELEMENTS=${NELEMENTS}, WAVEFORM_ID=03")
+dbLoadRecords("${TOP}/db/FAClient.db", "P=${P}, R=${R}, NELEMENTS=${NELEMENTS}, WAVEFORM_ID=04")
+dbLoadRecords("${TOP}/db/FAClient.db", "P=${P}, R=${R}, NELEMENTS=${NELEMENTS}, WAVEFORM_ID=05")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

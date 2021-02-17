@@ -13,7 +13,7 @@ NUM_IOCS=$1
 set -u
 
 for i in `seq -f %03g 1 ${NUM_IOCS}`; do
-    P="Test-Archiver:"
+    P="T-Arch:"
     R="Prod-${i}:"
     SOCKET=unix:${SCRIPTPATH}/sockets/${i}.sock
     echo "==========================="
